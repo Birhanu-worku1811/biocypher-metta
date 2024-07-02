@@ -3,6 +3,10 @@ A project for creating [BioCypher-driven](https://github.com/biocypher/biocypher
 [MeTTa](https://wiki.opencog.org/w/File:MeTTa_Specification.pdf) files.
 
 
+## To see the bto adapter results run the commnad:
+`python bto_adapter.py` 
+
+
 ## ⚙️ Installation (local)
 1. Clone this repository.
 ```{bash}
