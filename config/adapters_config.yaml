@@ -435,7 +435,7 @@ rna_central_non_coding_rna:
     args:
       filepath: /mnt/hdd_2/abdu/biocypher_data/rna_central/homo_sapiens.GRCh38.bed.gz
       rfam_filepath: /mnt/hdd_2/abdu/biocypher_data/rna_central/rnacentral_rfam_annotations.tsv.gz
-      
+
   outdir: rna_central
   nodes: True
   edges: False
@@ -548,7 +548,7 @@ dbsuper_super_enhancer:
 
   outdir: dbsuper
   nodes: True
-  edges: False  
+  edges: False
 
 dbsuper_super_enhancer_regulates_gene:
   adapter:
@@ -571,7 +571,7 @@ dbsuper_super_enhancer_regulates_gene:
     cls: DBSNPAdapter
     args:
       filepath: /mnt/hdd_2/abdu/biocypher_data/dbsnp/00-common_all.vcf.gz
-    
+
   outdir: dbsnp
   nodes: True
   edges: False
@@ -584,7 +584,7 @@ enhancer_atlas_enhancer:
       enhancer_filepath: /mnt/hdd_2/abdu/biocypher_data/enhancer_atlas/enhancer.bed.gz
       enhancer_gene_filepath: /mnt/hdd_2/abdu/biocypher_data/enhancer_atlas/enhancer_gene
       tissue_to_ontology_filepath: ./aux_files/enhancer_atlas_tissues_to_ontology.pkl
-  
+
   outdir: enhancer_atlas
   nodes: True
   edges: False
@@ -651,5 +651,30 @@ clo_subtype_of:
       type: edge
       dry_run: False
   outdir: cell_line_ontology
+  nodes: False
+  edges: True
+
+bto_ontology:
+  adapter:
+    module: biocypher_metta.adapters.bto_ontology_adapter
+    cls: BtoOntologyAdapter
+    args:
+      ontology: 'bto'
+      type: node
+      dry_run: false
+  outdir: bto_ontology
+  nodes: True
+  edges: False
+
+bto_subclass_of:
+  adapter:
+    module: biocypher_metta.adapters.bto_ontology_adapter
+    cls: BtoOntologyAdapter
+    args:
+      ontology: 'bto'
+      label: bto_subclass_of
+      type: edge
+      dry_run: False
+  outdir: bto_ontology
   nodes: False
   edges: True

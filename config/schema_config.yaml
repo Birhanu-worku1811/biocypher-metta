@@ -750,3 +750,11 @@ located on chain:
   input_label: located_on_chain
   source: position_entity
   target: chromosome_chain
+
+bto_subclass_of:
+  is_a: subclass_of
+  represented_as: edge
+  input_label: bto_subclass_of
+  output_label: subclass_of
+  source: bto
+  target: bto
