@@ -1,13 +1,13 @@
 from biocypher_metta.adapters.ontologies_adapter import OntologyAdapter
 
 
-class BtoOntologyAdapter(OntologyAdapter):
+class BrendaTissueOntologyAdapter(OntologyAdapter):
     ONTOLOGIES = {
         'bto': 'http://purl.obolibrary.org/obo/bto.owl'
     }
 
     def __init__(self, write_properties, add_provenance, ontology, type, label='bto', dry_run=False):
-        super(BtoOntologyAdapter, self).__init__(write_properties, add_provenance, ontology, type, label, dry_run)
+        super(BrendaTissueOntologyAdapter, self).__init__(write_properties, add_provenance, ontology, type, label, dry_run)
 
     def get_ontology_source(self):
         """
