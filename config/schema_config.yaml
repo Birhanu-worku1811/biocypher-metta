@@ -758,3 +758,11 @@ bto_subclass_of:
   output_label: subclass_of
   source: bto
   target: bto
+
+efo_subclass_of:
+  is_a: subclass_of
+  represented_as: edge
+  input_label: efo_subclass_of
+  output_label: subclass_of
+  source: efo
+  target: efo
